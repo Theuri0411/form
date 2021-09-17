@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="results.html" method="GET">
+    <form action="results.html" method="GET" enctype="multipart/form-data">
         <div>
             <label for="name" id="name">Name
           <input type="text" name="name" placeholder="username" required />
@@ -53,13 +53,27 @@
         </div>
         <div>
             <label for="eyeColor">Eye Color</label>
-            <select name="eyeColor" id="eyeColor">
+            <select name="eyeColor" id="eyeColor" multiple>
           <option value="Green">Green</option>
           <option label="Blue" value="Blue"></option>
         </select>
         </div>
         <div>
-            <label for="password" id="password">Password
+            <label for="bio"> Bio</label>
+            <textarea name="bio" id="bio" cols="30" rows="10">
+The last donught with red white blue sprinkles</textarea
+        >
+      </div>
+      <div>
+        <input type="hidden" name="hidden" value="hi" />
+      </div>
+      <div>
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" />
+      </div>
+      <div>
+        <label for="password" id="password"
+          >Password
           <input
             type="password"
             name="password"
@@ -67,10 +81,9 @@
             required
           />
         </label>
-        </div>
-        <button type="reset">Reset</button>
-        <button>Submit</button>
+      </div>
+      <button type="reset">Reset</button>
+      <button>Submit</button>
     </form>
-</body>
-
+  </body>
 </html>
